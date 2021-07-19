@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'mail',
     'tinymce',
-    'django_celery_monitor',
+
 
 ]
 

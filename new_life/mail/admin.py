@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import MailSendler
 from django.core.mail import send_mail
 from .tasks import sending_mail_celery
-from django_celery_monitor.models import TaskState
+#from django_celery_monitor.models import TaskState
 
 # Register your models here.
 
@@ -36,4 +36,4 @@ class AdminSendMailer(admin.ModelAdmin):
 
 
 admin.site.register(MailSendler, AdminSendMailer)
-admin.site.register(TaskState)
+#admin.site.register(TaskState)
