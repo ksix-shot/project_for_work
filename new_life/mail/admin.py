@@ -14,7 +14,7 @@ def sending_mail(modeladmin, request, queryset):
         email_list = i.adress
         email_list = email_list.split(';')
         print(email_list)
-        sending_mail_celery.delay(i.subject, i.text, 'django.testing.sultanov@gmail.com', email_list,
+        sending_mail_celery.delay(i.subject, None, 'django.testing.sultanov@gmail.com', email_list,
                                   fail_silently=False, html_message=i.text)
     queryset.update(sending=True)
 
